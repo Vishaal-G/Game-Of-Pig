@@ -1,0 +1,74 @@
+#main{
+    -fx-background-color: #EDC2D8FF;
+    -fx-border-color: #FCF6F5FF;
+    -fx-border-width: 10 10 10 10;
+    -fx-border-radius: 15px;
+    -fx-text-alignment: center;
+    
+}
+#instructionsPane{
+    -fx-background-color: #EDC2D8FF;
+    -fx-border-color: #FCF6F5FF;
+    -fx-border-width: 10 10 10 10;
+    -fx-border-radius: 15px;
+    -fx-text-alignment: center;
+}
+#game1{
+    -fx-background-color: #EDC2D8FF;
+}
+#game2{
+    -fx-background-color: #8ABAD3FF;
+    -fx-border-width: 10 10 10 10;
+    -fx-border-radius: 15px;
+}
+#player1_pane{
+    -fx-text-alignment: center;
+    -fx-background-color: #FCF6F5FF;
+    -fx-border-color: #000000FF;
+    -fx-border-width: 10 10 10 10;
+
+}
+#player2_pane{
+    -fx-text-alignment: center;
+    -fx-background-color: #FCF6F5FF;
+    -fx-border-color: #000000FF;
+    -fx-border-width: 10 10 10 10;
+}
+#game_options{
+    -fx-background-color: #FCF6F5FF;
+    -fx-background-color: #FCF6F5FF;
+    -fx-border-color: #000000FF;
+    -fx-border-width: 10 10 10 10;
+}
+#gamepane{
+    -fx-background-color: #FAEBEFFF
+}
+#dice{
+    -fx-border-color: #000000FF;
+    -fx-border-width: 5 5 5 5;
+    -fx-border-radius: 15px;
+}
+#Settings{
+    -fx-background-color: #EDC2D8FF;
+    -fx-border-color: #FCF6F5FF;
+    -fx-border-width: 10 10 10 10;
+    -fx-border-radius: 15px;
+    -fx-text-alignment: center;
+}
+.button{
+    -fx-text-alignment: center;
+    -fx-text-fill: #FCF6F5FF;
+    -fx-background-color: #8ABAD3FF;
+    -fx-boder-radius: 15px;
+    -fx-border-color: #EDC2D8FF;
+    -fx-border-width: 5 5 5 5;
+}
+.button:hover{
+    -fx-background-color: #f677c0;
+}
+.button:pressed{
+    -fx-background-color: #f677c0;
+    -fx-translate-y: 4px;
+    -fx-effect: dropshadow(three-pass-box, #666,0,0,0,2);
+}
+

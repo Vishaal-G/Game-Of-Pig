@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.of.pig.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="main" onDragDetected="#handleButtonAction" prefHeight="200.0" prefWidth="200.0" stylesheets="@Game%20Of%20Pig.css">
+         <children>
+            <Text fx:id="title" layoutX="160.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A Game Of Pig" textAlignment="CENTER" wrappingWidth="279.13671875">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Text>
+            <Button fx:id="play" layoutX="221.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="51.0" prefWidth="158.0" stylesheets="@Game%20Of%20Pig.css" text="Play" />
+            <ImageView fitHeight="123.0" fitWidth="184.0" layoutX="238.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@main.png" />
+               </image>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </ImageView>
+            <Button fx:id="instructions" layoutX="221.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="51.0" prefWidth="158.0" stylesheets="@Game%20Of%20Pig.css" text="Instructions" />
+            <Button fx:id="settings" layoutX="221.0" layoutY="313.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="51.0" prefWidth="158.0" stylesheets="@Game%20Of%20Pig.css" text="Settings" />
+         </children>
+      </AnchorPane>
+      <GridPane fx:id="instructionsPane" onDragDetected="#handleButtonAction" stylesheets="@Game%20Of%20Pig.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="20.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instructions" wrappingWidth="200.13671875">
+                     <font>
+                        <Font size="38.0" />
+                     </font></Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Text layoutX="30.0" layoutY="-56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="On a turn, a player rolls the die repeatedly. The goal is to accumulate as many points as possible, adding up the numbers rolled on the die. However, if a player rolls a 1, the player's turn is over and any points they have accumulated during this turn are forfeited. Rolling a 1 doesn't wipe out your entire score from previous turns, just the total earned during that particular roll. " wrappingWidth="532.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="30.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A player can also choose to hold (stop rolling the die) if they do not want to take a chance of rolling a 1 and losing all of their points from this turn. If the player chooses to hold, all of the points rolled during that turn are added to his or her score." wrappingWidth="525.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="133.0" prefWidth="387.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <Text layoutX="27.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="When a player reaches a total of 100 or more points, the game ends and that player is the winner." wrappingWidth="532.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="75.0" fitWidth="164.0" layoutX="-14.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="instructions_back" layoutX="171.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="51.0" prefWidth="109.0" text="Back" />
+               </children></AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="game" onDragDetected="#handleButtonAction" stylesheets="@Game%20Of%20Pig.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane fx:id="gamepane" prefHeight="200.0" prefWidth="200.0" stylesheets="@Game%20Of%20Pig.css" GridPane.columnIndex="1">
+               <children>
+                  <AnchorPane fx:id="dice" layoutY="167.0" prefHeight="55.0" prefWidth="200.0" stylesheets="@Game%20Of%20Pig.css">
+                     <children>
+                        <ImageView fx:id="roll1" fitHeight="75.0" fitWidth="76.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@four.png" />
+                           </image></ImageView>
+                        <ImageView fx:id="roll2" fitHeight="75.0" fitWidth="76.0" layoutX="110.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@five.png" />
+                           </image></ImageView>
+                        <Button fx:id="play_again" layoutX="32.0" layoutY="24.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="137.0" text="Play Again" visible="false" />
+                        <Text fx:id="win1" layoutX="52.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1 Wins!!!!!!" wrappingWidth="137.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="win2" layoutX="52.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2 Wins!!!!!!" wrappingWidth="137.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="137.0" fitWidth="123.0" layoutX="39.0">
+                     <image>
+                        <Image url="@e4c3b740fe0b3276b3ac5149bc822e7c-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane fx:id="game_options" layoutX="48.0" layoutY="272.0" prefHeight="100.0" prefWidth="88.0" stylesheets="@Game%20Of%20Pig.css">
+                     <children>
+                        <Button fx:id="roll" layoutX="19.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="35.0" prefWidth="66.0" text="Roll" />
+                        <Button fx:id="hold" layoutX="20.0" layoutY="64.0" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="35.0" prefWidth="66.0" text="Hold" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="game1" maxWidth="200.0" minWidth="200.0" prefHeight="400.0" prefWidth="200.0" stylesheets="@Game%20Of%20Pig.css">
+               <children>
+                  <Text layoutX="36.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1" wrappingWidth="169.13671875">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="score1" layoutX="80.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="59.13671875">
+                     <font>
+                        <Font size="47.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane fx:id="player1_pane" layoutX="16.0" layoutY="236.0" maxHeight="170.0" maxWidth="235.0" minHeight="105.0" minWidth="169.0" prefHeight="150.0" prefWidth="169.0" stylesheets="@Game%20Of%20Pig.css">
+                     <children>
+                        <Text layoutX="6.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Current Score" textAlignment="CENTER">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="current" layoutX="53.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="137.0">
+                           <font>
+                              <Font size="79.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fx:id="turn1" fitHeight="95.0" fitWidth="115.0" layoutX="43.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@turns2-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="game2" maxHeight="400.0" maxWidth="200.0" minHeight="400.0" minWidth="200.0" prefHeight="400.0" prefWidth="200.0" stylesheets="@Game%20Of%20Pig.css" GridPane.columnIndex="2">
+               <children>
+                  <Text layoutX="26.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2" wrappingWidth="189.0">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="score2" layoutX="83.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="76.0">
+                     <font>
+                        <Font size="47.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane fx:id="player2_pane" layoutX="17.0" layoutY="236.0" maxHeight="170.0" maxWidth="235.0" minHeight="105.0" minWidth="169.0" prefHeight="150.0" prefWidth="169.0" stylesheets="@Game%20Of%20Pig.css">
+                     <children>
+                        <Text layoutX="12.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Score" wrappingWidth="169.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="current2" layoutX="57.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="225.0">
+                           <font>
+                              <Font size="79.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fx:id="turn2" fitHeight="69.0" fitWidth="169.0" layoutX="49.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@turns2-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="Settings" onDragDetected="#handleButtonAction" stylesheets="@Game%20Of%20Pig.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="421.0" prefWidth="300.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings" wrappingWidth="200.13671875">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <TextField fx:id="WinScore2" editable="false" layoutX="192.0" layoutY="12.0" prefHeight="25.0" prefWidth="94.0" />
+                  <Text layoutX="39.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score To Win: " wrappingWidth="175.13671875">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Text layoutX="27.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Win Score" wrappingWidth="260.0">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="WinScore" layoutX="182.0" layoutY="12.0" prefHeight="35.0" prefWidth="260.0" />
+               </children></AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Button fx:id="submit" layoutX="170.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleButtonAction3" prefHeight="40.0" prefWidth="106.0" text="Save" />
+               </children></AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="123.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@47233cf72581bd4285ac6e5b964cace1-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="settings_back" layoutX="170.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="51.0" prefWidth="106.0" text="Exit" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</StackPane>
