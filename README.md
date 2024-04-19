@@ -1,0 +1,2 @@
+Pig is a straightforward dice game where two players compete to reach 100 points. On each turn, a player rolls a die repeatedly, aiming to accumulate points without rolling a 1. They have two choices during their turn: keep rolling to add to their score or hold to bank their current total and pass the turn to their opponent. If a player rolls a 1, they lose their turn and score nothing. Otherwise, they add the rolled number to their turn total and may continue rolling.
+Created using Java (Netbeans IDE) and CSS
